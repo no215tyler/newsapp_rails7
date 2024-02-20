@@ -12,4 +12,7 @@ class ChecksController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
+
+  def revert_check
+  end
 end
