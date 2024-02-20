@@ -14,5 +14,7 @@ class ChecksController < ApplicationController
   end
 
   def revert_check
+    check_id = Check.find_by(article_id: params[:id]).id
+    Check.destroy(check_id)
   end
 end
