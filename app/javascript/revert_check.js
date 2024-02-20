@@ -1,5 +1,13 @@
 const revertCheck = () => {
-  console.log("reading file revert_check.js");
-};
+  const checkButtons = document.querySelectorAll(".article-check-button");
 
+  checkButtons.forEach((checkButton) => {
+    checkButton.addEventListener("click", () => {
+      const articleId = checkButton.getAttribute("data");
+      const XHR = new XMLHttpRequest();
+      XHR.open("GET", `/checks/revert/${articleId}`, true);
+      XHR.send();
+    });
+  });
+};
 window.addEventListener("turbo:load", revertCheck);
