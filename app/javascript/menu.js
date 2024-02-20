@@ -1,5 +1,4 @@
 const menu = () => {
-  console.log("リロードで発火");
   const pullDownButton = document.getElementById("menu1");
   const pullDownMenu = document.getElementById("menu1-pull-down");
 
